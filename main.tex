@@ -1,0 +1,94 @@
+% Main file used to compile the internship report
+\documentclass{enib-report}
+
+% PDF metadata
+\hypersetup{
+    pdfauthor   = {First Name LAST NAME},
+    pdftitle    = {Intern Report},
+    pdfsubject  = {Subject},
+    pdfkeywords = {Keywords},
+}
+
+% Custom margins 
+\geometry{vmargin=4.0cm}
+
+% Adjust headheight and topmargin to avoid warnings
+\setlength{\headheight}{38.49326pt}
+\addtolength{\topmargin}{-8.49326pt}
+
+% Bibliography resource
+\addbibresource{./biblio/biblio.bib}
+
+% Glossary and acronyms
+\makeglossaries
+\input{./glossary}
+
+\begin{document}
+
+% Front cover
+\input{./cover/front}
+
+% Document language
+\selectlanguage{english}
+
+% Acknowledgements
+\clearemptydoublepage
+\input{./acknowledgement/acknowledgement}
+
+% Table of contents
+\frontmatter
+\clearemptydoublepage
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents
+
+% Lists
+\clearemptydoublepage
+\listoffigures
+
+\clearemptydoublepage
+\listoftables
+
+\clearemptydoublepage
+\lstlistoflistings
+
+% Introduction
+\clearemptydoublepage
+\input{./introduction/introduction}
+
+% Main chapters
+\mainmatter
+
+\clearemptydoublepage
+\input{./chapter1/chapter1}
+
+\clearemptydoublepage
+\input{./chapter2/chapter2}
+
+\clearemptydoublepage
+\input{./chapter3/chapter3}
+
+% Conclusion
+\backmatter
+\clearemptydoublepage
+\input{./conclusion/conclusion}
+
+% Bibliography
+\clearemptydoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+\nocite{*}
+\printbibliography
+
+% Glossary
+\clearemptydoublepage
+\printglossary[type=\acronymtype]
+
+% Appendix
+\clearemptydoublepage
+\input{./appendix/appendix}
+
+% Ensure the back cover appears on an even page
+\cleartoevenpage[\thispagestyle{empty}]
+\input{./cover/back}
+
+\end{document}
