@@ -58,7 +58,7 @@
 % Load package for adding graphical elements to pages
 \RequirePackage{eso-pic}
 % Load package for referencing the last page
-\RequirePackage{lastpage} 
+\RequirePackage{lastpage}
 
 % ------------------------- ABSTRACT, HEADERS, AND FOOTERS -------------------------
 % Load package for adding an abstract
