@@ -108,10 +108,12 @@
 \RequirePackage{csquotes}
 
 % Configure Listings
-% Change 'Listing' to 'Code'
+% Pour les listings (package listings)
 \renewcommand{\lstlistingname}{Code}
-% Redefine the title of the List of Listings
-\renewcommand{\lstlistlistingname}{List of \lstlistingname s}
+\renewcommand{\lstlistlistingname}{L\MakeLowercase{ist of \lstlistingname s}}
+
+\renewcommand{\listfigurename}{List of Figures}
+\renewcommand{\listtablename}{List of tables}
 
 % Define Font Commands
 % Command for the font style used in the front cover
