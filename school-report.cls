@@ -6,8 +6,10 @@
 \newlength{\bindingoffset}
 \newlength{\logomargin}
 
-\newcommand{\enibLogo}{./cover/enib_inp}
+\newcommand{\schoolLogo}{./cover/cesi}
 \newcommand{\companyLogo}{./cover/company}
+\newcommand{\frontCover}{./cover/front-background-cesi.pdf}
+\newcommand{\backCover}{./cover/back-background-cesi.pdf}
 
 \newcommand{\globalMail}{\@mail}
 
@@ -131,7 +133,7 @@
       \vfill
       \centering
       % Insert the front cover background image, scaling it to fit the page while maintaining the aspect ratio.
-      \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{./cover/front-background.pdf}%
+      \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{\frontCover}%
       \vfill
     }
   }
@@ -144,7 +146,7 @@
       \vfill
       \centering
       % Insert the back cover background image, scaling it to fit the page while maintaining the aspect ratio.
-      \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{./cover/back-background.pdf}%
+      \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{\backCover}%
       \vfill
     }
   }
@@ -318,7 +320,7 @@
         };
 
         \node[anchor=north east, xshift=-\docmargin, yshift=-\docmargin] at (current page.north east) {%
-            \includegraphics[keepaspectratio, height=2cm]{\enibLogo}%
+            \includegraphics[keepaspectratio, height=2cm]{\schoolLogo}%
         };
     \end{tikzpicture}
     \par\nobreak % Prevent unwanted page breaks
@@ -421,7 +423,7 @@
 
   % Headers (logos)
   \fancyhead[L]{\includegraphics[height=1.2cm]{\companyLogo}}
-  \fancyhead[R]{\includegraphics[height=1.2cm]{\enibLogo}}
+  \fancyhead[R]{\includegraphics[height=1.2cm]{\schoolLogo}}
 
   \fancyfoot[C]{\thepage /\pageref{LastPage}} % Page number centered
   \fancyfoot[L]{\leftmark} % Chapter title on the left
